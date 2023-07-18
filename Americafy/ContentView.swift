@@ -13,12 +13,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
+                // Input the number of meters
                 Section {
                     TextField("Distance in meters", value: $meters, format: .number)
                         .keyboardType(.decimalPad)
                 } header: {
                     Text("Meters")
                 }
+                
+                // OUTPUT
                 
                 Section {
                     Text((meters / 1000), format: .number)
